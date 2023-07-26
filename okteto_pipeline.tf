@@ -5,6 +5,7 @@ resource okteto_pipeline "okteto_aws_lambda" {
 
     depends_on = [
         okteto_secret.aws_access_key_id,
-        okteto_secret.aws_secret_access_key
+        okteto_secret.aws_secret_access_key,
+        docker_image.okteto-pipeline-installer
     ]
 }
