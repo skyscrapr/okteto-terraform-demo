@@ -11,3 +11,8 @@ resource "docker_image" "okteto-pipeline-installer" {
     }
   }
 }
+
+# resource "docker_registry_image" "okteto-pipeline-installer" {
+#   name          = docker_image.okteto-pipeline-installer.name
+#   keep_remotely = false
+# }
