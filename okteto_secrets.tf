@@ -11,3 +11,11 @@ resource okteto_secret "aws_secret_access_key" {
     ]
 }
 
+resource okteto_secret "aws_region" {
+    name = "AWS_REGION"
+    value = "us-west-1"
+    depends_on = [
+        okteto_secret.aws_secret_access_key
+    ]
+}
+
